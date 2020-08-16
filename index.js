@@ -50,6 +50,8 @@ console.log('Dog.prototype', Dog.prototype) // Dog.prototype {eats: true, show: 
 */
 console.log('d5 dog', dog) // dog.__proto__ = {eats: false}
 
+let sabaken = new Dog("White Dog"); // !!!!! у вновь созданных появился метод show
+console.log('sabaken', sabaken) // sabaken.__proto__ = {eats: true},show() 
 /*==========================================================================================*/
 // создаём новый объект с прототипом animal
 let cat = Object.create(animal);
