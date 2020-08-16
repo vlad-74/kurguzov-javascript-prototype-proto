@@ -24,12 +24,17 @@ console.log('r3 rabbit', rabbit) //  rabbit.__proto__: Object
 /*---------------------------------!!!!!!!!!!!!!!-------------------------------------------*/
 let dog = new Dog("White Dog"); 
 
-// animal.eats = false // ЕСЛИ ИЗМЕНИТЬ ОБЪЕКТ КОТОРЫЙ БЫЛ В __proto__ ТО ИЗМЕНЕНИЯ ОТОБРАЗЯТЬСЯ И В dog.__proto__
-// console.log('d2 dog', dog) // dog.__proto__ == { eats: FALSE } !!!!!!!
-
-dog.__proto__ = { eats: false } //!!! ПЕРЕЗАТЕР animal !!! - rabbit.__proto__ = {eats: false}
+dog.__proto__ = { eats: false } // !!! ПЕРЕЗАТЕР animal !!! - rabbit.__proto__ = {eats: false}
 console.log('d3 dog', dog) // dog.__proto__ = {eats: false}
-console.log('animal', animal)
+console.log('animal', animal)  // !!! animal остался прежним
+
+// dog.__proto__.eats = 'true!!!'
+// console.log('d33 dog', dog) // dog.__proto__ = {eats: 'true!!!'}
+// console.log('animal', animal)  // !!! animal остался прежним
+
+// animal.eats = false // ЕСЛИ ИЗМЕНИТЬ ОБЪЕКТ КОТОРЫЙ БЫЛ В __proto__ ТО ИЗМЕНЕНИЯ ОТОБРАЗЯТЬСЯ И В dog.__proto__
+// console.log('d33 dog', dog) // dog.__proto__ == { eats: FALSE } !!!!!!!
+
 dog.__proto__ = 'thm'
 console.log('d4 dog', dog) // !!! примитив НЕ перезатер - dog.__proto__ = {eats: false}
 
