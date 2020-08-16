@@ -46,9 +46,9 @@ Dog.prototype.show = function() { console.log(this); };
 console.log('Dog.prototype', Dog.prototype) // Dog.prototype {eats: true, show: ƒ}
 /* 
   ПОСЛЕ ДОБАВЛЕНИЯ МЕТОДА К Dog.prototype
-  У dog НИЧЕГО НЕ ИЗМЕНИЛОСЬ - dog.__proto__ = {run: true}
+  У dog НИЧЕГО НЕ ИЗМЕНИЛОСЬ - dog.__proto__ = {eats: false}
 */
-console.log('d5 dog', dog) // dog.__proto__ = {run: true}
+console.log('d5 dog', dog) // dog.__proto__ = {eats: false}
 
 /*==========================================================================================*/
 // создаём новый объект с прототипом animal
